@@ -1,0 +1,5 @@
+fs = require('fs');
+s = fs.readFileSync('ponto_escritorio_sistema.js', 'utf8');
+s = s.replace(/function baixarPdfOrcamento_OLD/g, 'function baixarPdfOrcamento');
+s = s.replace(/baixarPdfOrcamento\.js/g, 'baixarPdfOrcamento.js');
+fs.writeFileSync('ponto_escritorio_sistema.js', s, 'utf8');

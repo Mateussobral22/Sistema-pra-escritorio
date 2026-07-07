@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ponto do Escritório — Sistema de Gestão</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ponto_escritorio_sistema.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+<div class="app">
+  <div class="sidebar">
+    <div class="logo-area">
+      <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
+        <line x1="28" y1="10" x2="28" y2="90" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+        <path d="M28 10 Q28 10 55 10 Q82 10 82 38 Q82 65 55 65 Q28 65 28 65" stroke="currentColor" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <circle cx="55" cy="38" r="9" fill="currentColor"/>
+      </svg>
+      <div class="logo-text"><strong>Ponto do Escritório</strong><span>Sistema de Gestão</span></div>
+    </div>
+    <div class="nav-section">Principal</div>
+    <div class="nav-item active" onclick="nav('dashboard')"><i class="ti ti-layout-dashboard"></i>Dashboard</div>
+    <div class="nav-section">Fiscal</div>
+    <div class="nav-item" onclick="nav('entrada')"><i class="ti ti-file-import"></i>Nota de Entrada</div>
+    <div class="nav-item" onclick="nav('saida')"><i class="ti ti-file-export"></i>Pedido de Venda</div>
+    <div class="nav-item" onclick="nav('orcamento')"><i class="ti ti-file-text"></i>Orçamento</div>
+    <div class="nav-section">Gestão</div>
+    <div class="nav-item" onclick="nav('faturamento')"><i class="ti ti-report-money"></i>Faturamento</div>
+    <div class="nav-item" onclick="nav('historico-vendas')"><i class="ti ti-history"></i>Histórico de Pedidos</div>
+    <div class="nav-item" onclick="nav('estoque')"><i class="ti ti-package"></i>Estoque</div>
+    <div class="nav-item" onclick="nav('clientes')"><i class="ti ti-users"></i>Clientes</div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <h1 id="page-title">Dashboard</h1>
+      <div class="topbar-actions" id="topbar-actions"></div>
+    </div>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+
+<script src="ponto_escritorio_sistema.js"></script>
+</body>
+</html>
